@@ -75,6 +75,19 @@
       ]
     },
     {
+      "group": "api reference",
+      "pages": [
+        {
+          "group": "API Reference",
+          "pages": [
+            "api-reference/get-plants",
+            "api-reference/post-plants",
+            "api-reference/delete-plants"
+          ]
+        }
+      ]
+    },
+    {
       "group": "Endpoint Examples",
       "pages": [
         "api-reference/endpoint/get",

@@ -57,7 +57,21 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "Go",
+            "source": "import (\n  \"fmt\"\n  \"encoding/json\"\n  \"github.com/swagger-api/swagger-petstore/pkg/testsdkconfig\"\n  \"github.com/swagger-api/swagger-petstore/pkg/testsdk\"\n  \"github.com/swagger-api/swagger-petstore/pkg/plants\"\n)\n\nconfig := testsdkconfig.NewConfig()\nclient := testsdk.NewTestSdk(config)\n\n\nparams := plants.GetPlantsRequestParams{}\n\n\nresponse, err := client.Plants.GetPlants(context.Background(), params)\nif err != nil {\n  panic(err)\n}\n\nfmt.Print(response)"
+          },
+          {
+            "lang": "TypeScript",
+            "source": "import { TestSdk } from 'test-sdk';\n\n(async () => {\n  const testSdk = new TestSdk({\n    token: 'YOUR_TOKEN',\n  });\n\n  const { data } = await testSdk.plants.getPlants({\n    limit: 8,\n  });\n\n  console.log(data);\n})();"
+          },
+          {
+            "lang": "Python",
+            "source": "from test_sdk import TestSdk, Environment\n\nsdk = TestSdk(\n    access_token=\"YOUR_ACCESS_TOKEN\",\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.plants.get_plants(limit=8)\n\nprint(result)"
+          }
+        ]
       },
       "post": {
         "description": "Creates a new plant in the store",
@@ -93,7 +107,21 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "Go",
+            "source": "import (\n  \"fmt\"\n  \"encoding/json\"\n  \"github.com/swagger-api/swagger-petstore/pkg/testsdkconfig\"\n  \"github.com/swagger-api/swagger-petstore/pkg/testsdk\"\n  \"github.com/swagger-api/swagger-petstore/pkg/plants\"\n)\n\nconfig := testsdkconfig.NewConfig()\nclient := testsdk.NewTestSdk(config)\n\n\nrequest := plants.NewPlant{}\nrequest.SetName(\"Name\")\nrequest.SetId(int64(123))\n\nresponse, err := client.Plants.CreatePlants(context.Background(), request)\nif err != nil {\n  panic(err)\n}\n\nfmt.Print(response)"
+          },
+          {
+            "lang": "TypeScript",
+            "source": "import { NewPlant, TestSdk } from 'test-sdk';\n\n(async () => {\n  const testSdk = new TestSdk({\n    token: 'YOUR_TOKEN',\n  });\n\n  const newPlant: NewPlant = {\n    name: 'name',\n    tag: 'tag',\n    id: 2,\n  };\n\n  const { data } = await testSdk.plants.createPlants(input);\n\n  console.log(data);\n})();"
+          },
+          {
+            "lang": "Python",
+            "source": "from test_sdk import TestSdk, Environment\nfrom test_sdk.models import NewPlant\n\nsdk = TestSdk(\n    access_token=\"YOUR_ACCESS_TOKEN\",\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nrequest_body = NewPlant(\n    name=\"name\",\n    tag=\"tag\",\n    id_=2\n)\n\nresult = sdk.plants.create_plants(request_body=request_body)\n\nprint(result)"
+          }
+        ]
       }
     },
     "/plants/{id}": {
@@ -126,7 +154,21 @@
               }
             }
           }
-        }
+        },
+        "x-codeSamples": [
+          {
+            "lang": "Go",
+            "source": "import (\n  \"fmt\"\n  \"encoding/json\"\n  \"github.com/swagger-api/swagger-petstore/pkg/testsdkconfig\"\n  \"github.com/swagger-api/swagger-petstore/pkg/testsdk\"\n)\n\nconfig := testsdkconfig.NewConfig()\nclient := testsdk.NewTestSdk(config)\n\nresponse, err := client.Plants.DeletePlantsById(context.Background(), int64(1234))\nif err != nil {\n  panic(err)\n}\n\nfmt.Print(response)"
+          },
+          {
+            "lang": "TypeScript",
+            "source": "import { TestSdk } from 'test-sdk';\n\n(async () => {\n  const testSdk = new TestSdk({\n    token: 'YOUR_TOKEN',\n  });\n\n  const { data } = await testSdk.plants.deletePlantsById(9);\n\n  console.log(data);\n})();"
+          },
+          {
+            "lang": "Python",
+            "source": "from test_sdk import TestSdk, Environment\n\nsdk = TestSdk(\n    access_token=\"YOUR_ACCESS_TOKEN\",\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.plants.delete_plants_by_id(id_=3)\n\nprint(result)"
+          }
+        ]
       }
     }
   },
