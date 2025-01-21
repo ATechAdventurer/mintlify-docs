@@ -78,11 +78,105 @@
       "group": "api reference",
       "pages": [
         {
-          "group": "API Reference",
+          "group": "Checkout",
           "pages": [
-            "api-reference/get-plants",
-            "api-reference/post-plants",
-            "api-reference/delete-plants"
+            "api-reference/checkout/get-checkoutsupported_countries"
+          ]
+        },
+        {
+          "group": "Customers",
+          "pages": [
+            "api-reference/customers/get-customers",
+            "api-reference/customers/post-customers",
+            "api-reference/customers/get-customers-1",
+            "api-reference/customers/patch-customers"
+          ]
+        },
+        {
+          "group": "Disputes",
+          "pages": [
+            "api-reference/disputes/get-disputes",
+            "api-reference/disputes/get-disputes-1"
+          ]
+        },
+        {
+          "group": "Invoices",
+          "pages": [
+            "api-reference/invoices/get-invoicespayments"
+          ]
+        },
+        {
+          "group": "License Keys",
+          "pages": [
+            "api-reference/license-keys/get-license_key_instances",
+            "api-reference/license-keys/get-license_key_instances-1",
+            "api-reference/license-keys/patch-license_key_instances",
+            "api-reference/license-keys/get-license_keys",
+            "api-reference/license-keys/get-license_keys-1",
+            "api-reference/license-keys/patch-license_keys"
+          ]
+        },
+        {
+          "group": "Licenses",
+          "pages": [
+            "api-reference/licenses/post-licensesactivate",
+            "api-reference/licenses/post-licensesdeactivate",
+            "api-reference/licenses/post-licensesvalidate"
+          ]
+        },
+        {
+          "group": "Payments",
+          "pages": [
+            "api-reference/payments/get-payments",
+            "api-reference/payments/post-payments",
+            "api-reference/payments/get-payments-1"
+          ]
+        },
+        {
+          "group": "Payouts",
+          "pages": [
+            "api-reference/payouts/get-payouts"
+          ]
+        },
+        {
+          "group": "Products",
+          "pages": [
+            "api-reference/products/get-products",
+            "api-reference/products/post-products",
+            "api-reference/products/get-products-1",
+            "api-reference/products/delete-products",
+            "api-reference/products/patch-products",
+            "api-reference/products/put-products-images"
+          ]
+        },
+        {
+          "group": "Refunds",
+          "pages": [
+            "api-reference/refunds/get-refunds",
+            "api-reference/refunds/post-refunds",
+            "api-reference/refunds/get-refunds-1"
+          ]
+        },
+        {
+          "group": "Subscriptions",
+          "pages": [
+            "api-reference/subscriptions/get-subscriptions",
+            "api-reference/subscriptions/post-subscriptions",
+            "api-reference/subscriptions/get-subscriptions-1",
+            "api-reference/subscriptions/patch-subscriptions"
+          ]
+        },
+        {
+          "group": "Webhook Events",
+          "pages": [
+            "api-reference/webhook-events/get-webhook_events",
+            "api-reference/webhook-events/get-webhook_events-1"
+          ]
+        },
+        {
+          "group": "Outgoing Webhooks",
+          "pages": [
+            "api-reference/outgoing-webhooks/post-your-webhook-url"
           ]
         }
       ]
@@ -100,5 +194,15 @@
     "x": "https://x.com/mintlify",
     "github": "https://github.com/mintlify",
     "linkedin": "https://www.linkedin.com/company/mintsearch"
+  },
+  "api": {
+    "request": {
+      "example": {
+        "languages": [
+          "bash",
+          "PHP"
+        ]
+      }
+    }
   }
 }
