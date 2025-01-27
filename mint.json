@@ -78,11 +78,11 @@
       "group": "api reference",
       "pages": [
         {
-          "group": "API Reference",
+          "group": "pets",
           "pages": [
-            "api-reference/get-plants",
-            "api-reference/post-plants",
-            "api-reference/delete-plants"
+            "api-reference/pets/list-all-pets",
+            "api-reference/pets/create-a-pet",
+            "api-reference/pets/info-for-a-specific-pet"
           ]
         }
       ]
@@ -100,5 +100,18 @@
     "x": "https://x.com/mintlify",
     "github": "https://github.com/mintlify",
     "linkedin": "https://www.linkedin.com/company/mintsearch"
+  },
+  "api": {
+    "request": {
+      "example": {
+        "languages": [
+          "bash",
+          "Go",
+          "Java",
+          "Python",
+          "TypeScript"
+        ]
+      }
+    }
   }
 }
